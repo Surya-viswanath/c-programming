@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+   char str1[]="hey surya";
+   printf("%s\n",str1);
+   char str2[9]={'h','e','y',' ','s','u','r','y','a','\0'};
+   for(i=0;i<9;i++){
+       printf("%c",str2[i]);
+   }
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <stdio.h>
+ struct one{
+        int age;
+        char name[];
+    }a2;
+int main() {
+   a2.age=22;
+   strcpy(a2.name,"surya");
+    printf("age is:%d\n",a2.age);
+    printf("name is:%s",a2.name);
+    return 0;
+}
