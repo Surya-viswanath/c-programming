@@ -1,0 +1,46 @@
+*********dessending**************
+#include <stdio.h>
+
+int main() {
+    int i,j,temp,k;
+    int a[10]={13,3,9,5,8,11,7,2,6,10};
+    for(i=0;i<10;i++){
+        for(j=i+1;j<10;j++){
+            if(a[j]>a[i]){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(k=0;k<10;k++){
+        printf("%d\n",a[k]);
+    }
+    return 0;
+}
+
+
+
+
+
+***********assending********************
+
+#include <stdio.h>
+
+int main() {
+    int i,j,temp,k;
+    int a[10]={13,3,9,5,8,11,7,2,6,10};
+    for(i=0;i<10;i++){
+        for(j=i+1;j<10;j++){
+            if(a[j]<a[i]){
+                temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+    }
+    for(k=0;k<10;k++){
+        printf("%d\n",a[k]);
+    }
+    return 0;
+}

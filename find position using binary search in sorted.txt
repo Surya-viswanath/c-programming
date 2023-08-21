@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int n,key,left,right,mid;
+    int a[]={2,3,5,8,11,120};
+    n=sizeof(a)/sizeof(a[0]);
+    key=3;
+    left=0;
+    right=n-1;
+    while(left<=right){
+        mid=(left+right)/2;
+        if(a[mid]==key){
+            printf("the position is:%d",mid+1);
+            break;
+        }
+        else if(a[mid]>key){
+            right=mid-1;
+        }
+        else{
+            left=mid+1;
+        }
+    }
+    if(left>right){
+        printf("not found");
+    }
+
+    return 0;
+}
