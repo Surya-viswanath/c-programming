@@ -1,0 +1,30 @@
+#include <stdio.h>
+int insertion(int a[15],int n,int x,int capacity){
+    int i;
+    if(n>=capacity){
+        return n;
+    }
+    for(i=n-1;i>=0 && a[i]>x;i--){
+        a[i+1]=a[i];
+    }
+    a[i+1]=x;
+    
+}
+int main() {
+   int i,n,x;
+   int a[15]={2,6,12,30,35};
+   int capacity=sizeof(a)/sizeof(a[0]);
+   n=5;
+   x=15;
+   printf("Array before insertion:");
+   for(i=0;i<n;i++){
+       printf("%d ",a[i]);
+   }
+   insertion(a,n,capacity,x);
+ n++;
+   printf("\nArray after insertion:");
+   for(i=0;i<n;i++){
+       printf("%d ",a[i]);
+   }
+    return 0;
+}
