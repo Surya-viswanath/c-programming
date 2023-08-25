@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int i,j,x,n,min,temp;
+   int a[10]={15,3,1,10,15,1};
+    //n=sizeof(a)/sizeof(a[0]);
+   n=6;
+   printf("Array before insertion sort:");
+   for(i=0;i<n;i++){
+      printf("%d ",a[i]);
+  }
+   for(i=0;i<n;i++){
+       x=a[i];
+       for(j=i-1;j>=0 && a[j]>x;j--){
+          a[j+1]=a[j];
+              }
+              a[j+1]=x;
+   }
+  printf("\nArray after insertion sort:");
+   for(i=0;i<n;i++){
+      printf("%d ",a[i]);
+  }
+    return 0;
+}
